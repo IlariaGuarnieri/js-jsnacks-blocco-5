@@ -63,6 +63,7 @@ const somma = zucchine.reduce((acc, zucchina)=>
   // 2. JSnack 2
 // Crea 10 oggetti che rappresentano una zucchina.
 // Dividi in due array separati le zucchine che misurano meno o più di 15cm.
+// Infine stampa separatamente quanto pesano i due gruppi di zucchine.
 
 const zucchine2 = [
   {
@@ -134,3 +135,15 @@ const zucchinePiuDi15 =zucchine2.filter(zucchina => zucchina.lunghezza <= 15);
 
 console.log(zucchineMenoDi15);
 console.log(zucchinePiuDi15);
+
+
+// 3. JSnack 3
+// Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (es. Ciao -> oaiC)
+
+const stringaIniziale = 'ciao';
+const stringaContraria = giraStringa(stringaIniziale);
+console.log(stringaContraria);
+
+function giraStringa(stringa) {
+  return stringa.split('').reverse().join('');
+}
