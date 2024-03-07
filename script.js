@@ -98,7 +98,7 @@ const zucchine2 = [
   {
     varietà: 'tonda', 
     peso: 0.18,
-    lunghezza: 17,
+    lunghezza: 11,
   },
   {
     varietà: 'striata', 
@@ -117,21 +117,20 @@ const zucchine2 = [
   },
 ];
 
-zucchineMenoDi15();
 
+const zucchineMenoDi15 =zucchine2.filter(zucchina =>zucchina.lunghezza > 15);
+//   if(zucchina.lunghezza >= '15'){
+//     return true
+//   }
+//   return false
+// })
 
-const zucchineMenoDi15 =zucchine2.filter(zucchina =>{
-  if(zucchina.lunghezza >= '15'){
-    return true
-  }
-  return false
-})
+const zucchinePiuDi15 =zucchine2.filter(zucchina => zucchina.lunghezza <= 15);
+//   if(zucchina.lunghezza <'15'){
+//     return true
+//   }
+//   return false
+// })
 
-const zucchinePiuDi15 =zucchine2.filter(zucchina =>{
-  if(zucchina.lunghezza <= '15'){
-    return true
-  }
-  return false
-})
-
-console.log(zucchineMenoDi15)
+console.log(zucchineMenoDi15);
+console.log(zucchinePiuDi15);
