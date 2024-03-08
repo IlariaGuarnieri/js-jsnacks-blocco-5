@@ -140,10 +140,56 @@ console.log(zucchinePiuDi15);
 // 3. JSnack 3
 // Scrivi una funzione che accetti una stringa come argomento e la ritorni girata (es. Ciao -> oaiC)
 
+// variabile di cio che devo girare
 const stringaIniziale = 'ciao';
+// invoco e utilizzo la funzione
 const stringaContraria = giraStringa(stringaIniziale);
 console.log(stringaContraria);
 
+// creo la funzione che gira
+// split  suddivide la stringa in un array di singoli caratteri
+// reverse inverte l'ordine
+// riunisce in stringa gli elem dell'array
 function giraStringa(stringa) {
   return stringa.split('').reverse().join('');
+}
+
+// 4. JSnack 4
+// Scrivi una funzione che fonda due array (aventi lo stesso numero di elementi) prendendo alternativamente gli elementi da uno e dall’altro
+// es. [a,b,c], [1,2,3] → [a,1,b,2,c,3].
+
+const numeri =['a','b','c','d','e'];
+const lettere =[ '1', '2', '3', '4', '5'];
+const letNum =[];
+
+const maggioreLunghezza = numeri.length > lettere.length ? numeri.length: lettere.length;
+
+for(let i = 0; i < maggioreLunghezza; i++){
+  if(numeri[i])letNum.push(numeri[i]);
+  if(lettere[i])letNum.push(lettere[i]);
+}
+
+console.log(letNum);
+
+
+
+// 5. JSnack 5
+// Scrivi una funzione che accetti tre argomenti:
+// un array e due numeri (“a” più piccolo di “b” e “b” grande al massimo quanto il numero di elementi dell’array).
+// La funzione ritornerà un nuovo array con i valori che hanno la posizione compresa tra “a” e “b”
+
+snack5(zucchine, 3, 7);
+
+function snack5 (arrayElement, numA, numB)
+{
+  if(numA != 0 && numA < numB && numB <= arrayElement.length)
+  {
+    let resultArrey =[];
+    for (let i = numA; i<= numB; i++)
+    {
+      resultArrey.push(arrayElement[i])
+    }
+    console.log(resultArrey);
+    return(resultArrey);
+  }
 }
